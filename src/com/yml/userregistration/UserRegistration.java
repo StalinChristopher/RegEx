@@ -7,6 +7,7 @@ public class UserRegistration {
 		Scanner in = new Scanner(System.in);
 		System.out.println("Welcome to user registration program");
 		
+		
 		//UC1 first name pattern
 		String firstNamePattern = "^[A-Z]{1}[a-zA-Z]{2,}";
 		System.out.println("Please enter a first name");
@@ -19,7 +20,7 @@ public class UserRegistration {
 		String lastName = in.nextLine();
 		validator(lastNamePattern,lastName,"last name");
 		
-		//UC3 mobile number
+		//UC4 mobile number validation
 		String mobilePattern = "[0-9]{2}[\\s][0-9]{10}";
 		System.out.println("Please enter the mobile number");
 		String mobile = in.nextLine();
