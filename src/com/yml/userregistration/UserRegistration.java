@@ -18,7 +18,13 @@ public class UserRegistration {
 		System.out.println("Please enter a first name");
 		String lastName = in.nextLine();
 		validator(lastNamePattern,lastName,"last name");
-
+		
+		//UC3 mobile number
+		String mobilePattern = "[0-9]{2}[\\s][0-9]{10}";
+		System.out.println("Please enter the mobile number");
+		String mobile = in.nextLine();
+		validator(mobilePattern,mobile,"mobile number");
+		
 	}
 	
 	public static void validator(String pattern, String input,String type) {
