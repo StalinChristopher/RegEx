@@ -12,6 +12,12 @@ public class UserRegistration {
 		System.out.println("Please enter a first name");
 		String firstName = in.nextLine();
 		validator(firstNamePattern,firstName,"first name");
+		
+		//UC2 last name pattern
+		String lastNamePattern = "^[A-Z]{1}[a-zA-Z]{2,}";
+		System.out.println("Please enter a first name");
+		String lastName = in.nextLine();
+		validator(lastNamePattern,lastName,"last name");
 
 	}
 	
