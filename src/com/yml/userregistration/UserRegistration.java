@@ -1,18 +1,25 @@
 package com.yml.userregistration;
-
+import java.util.*;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
 	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
 		System.out.println("Welcome to user registration program");
 		
 		//UC1 first name pattern
 		String firstNamePattern = "^[A-Z]{1}[a-zA-Z]{2,}";
-		String testCase1FirstName = "Abc";
-		String testCase2FirsName = "abc";
-		System.out.println(Pattern.matches(firstNamePattern,testCase2FirsName));
-		
-		
-		
+		System.out.println("Please enter a first name");
+		String firstName = in.nextLine();
+		validator(firstNamePattern,firstName,"first name");
+
+	}
+	
+	public static void validator(String pattern, String input,String type) {
+		if(Pattern.matches(pattern,input)) {
+			System.out.println("Given input '"+input+ "' is a valid "+type);
+		}else {
+			System.out.println("Given input '"+input+ "' is invalid "+type);
+		}
 	}
 }
