@@ -21,7 +21,7 @@ public class UserRegistration {
 		validator(lastNamePattern,lastName,"last name");
 		
 		//UC3 email validation
-		String emailPattern = "^[0-9a-zA-Z]+([.+_\\-][0-9a-zA-Z])*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$";
+		String emailPattern = "^[0-9a-zA-Z]+([.+_\\-][0-9a-zA-Z]*)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$";
 		System.out.println("Please enter your email");
 		String email = in.nextLine();
 		validator(emailPattern,email,"email");
@@ -34,7 +34,7 @@ public class UserRegistration {
 		
 		//password validation
 		String passwordPattern = "[0-9a-zA-Z!@#$%^&*]{8,}";   //UC5
-		String passwordPattern2 = "(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*]{8,}";  //UC6
+		String passwordPattern2 =  "(?=.*[A-Z]).{8,}";   //UC6
 		System.out.println("Please enter your password");
 		String password = in.nextLine();
 		validator(passwordPattern2,password,"password");
