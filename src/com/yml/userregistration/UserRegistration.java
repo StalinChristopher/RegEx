@@ -32,11 +32,12 @@ public class UserRegistration {
 		String mobile = in.nextLine();
 		validator(mobilePattern,mobile,"mobile number");
 		
-		//UC5 password validation
-		String passwordPattern = "[0-9a-zA-Z]{8,}";
+		//password validation
+		String passwordPattern = "[0-9a-zA-Z!@#$%^&*]{8,}";   //UC5
+		String passwordPattern2 = "(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*]{8,}";  //UC6
 		System.out.println("Please enter your password");
 		String password = in.nextLine();
-		validator(passwordPattern,password,"password");
+		validator(passwordPattern2,password,"password");
 		
 	}
 	
