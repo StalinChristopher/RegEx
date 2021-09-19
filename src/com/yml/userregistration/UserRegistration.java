@@ -38,7 +38,7 @@ public class UserRegistration {
 		String passwordPattern3 = "(?=.*[A-Z])(?=.*[0-9]).{8,}";  //UC7
 		System.out.println("Please enter your password");
 		String password = in.nextLine();
-		validator(passwordPattern2,password,"password");
+		validator(passwordPattern3,password,"password");
 		
 	}
 	
