@@ -21,6 +21,7 @@ public class UserRegistration {
 		validator(lastNamePattern,lastName,"last name");
 		
 		//UC3 email validation
+		//Validated for all use cases given in the file
 		String emailPattern = "^[0-9a-zA-Z]+([.+_\\-][0-9a-zA-Z]*)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$";
 		System.out.println("Please enter your email");
 		String email = in.nextLine();
