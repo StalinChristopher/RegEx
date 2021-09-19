@@ -16,9 +16,15 @@ public class UserRegistration {
 		
 		//UC2 last name pattern
 		String lastNamePattern = "^[A-Z]{1}[a-zA-Z]{2,}";
-		System.out.println("Please enter a first name");
+		System.out.println("Please enter a last name");
 		String lastName = in.nextLine();
 		validator(lastNamePattern,lastName,"last name");
+		
+		//UC3 email validation
+		String emailPattern = "^[0-9a-zA-Z]+([.+_\\-][0-9a-zA-Z])*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$";
+		System.out.println("Please enter your email");
+		String email = in.nextLine();
+		validator(emailPattern,email,"email");
 		
 		//UC4 mobile number validation
 		String mobilePattern = "[0-9]{2}[\\s][0-9]{10}";
